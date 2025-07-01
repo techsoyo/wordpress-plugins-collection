@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto ALT Text Generator - Plugin de WordPress</title>
+    <meta name="description"
+        content="Plugin gratuito de WordPress que genera automáticamente texto alternativo para imágenes, mejorando la accesibilidad y SEO de tu sitio web.">
+    <meta name="keywords" content="WordPress, plugin, ALT text, accesibilidad, SEO, imágenes, generador automático">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #007cba;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #005a87;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .features {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .how-it-works {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007cba;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .installation {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #68d391;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .download-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #007cba;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 2rem 0;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .features h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>🖼️ Auto ALT Text Generator</h1>
+            <p>El plugin de WordPress que genera automáticamente texto alternativo para tus imágenes, mejorando la
+                accesibilidad y SEO de tu sitio web.</p>
+
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">Descargar Gratis</a>
+                <a href="#demo" class="btn btn-secondary">Ver Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>¿Por qué elegir Auto ALT Text Generator?</h2>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratuito</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Configuración</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Modos de Uso</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Imágenes</div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Automático</h3>
+                    <p>Genera texto ALT automáticamente cuando subes imágenes. Sin configuración adicional necesaria.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Manual</h3>
+                    <p>Botón AJAX para actualizar el texto ALT de imágenes existentes en publicaciones ya creadas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Shortcode</h3>
+                    <p>Usa <code>[auto_alt_text]</code> en cualquier página o post para mostrar el generador en el
+                        frontend.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seguro</h3>
+                    <p>Código limpio y seguro que sigue las mejores prácticas de WordPress. Validaciones y nonces
+                        incluidos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Estadísticas</h3>
+                    <p>Ve el porcentaje de imágenes con y sin texto ALT en tu sitio web directamente desde el panel.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Personalizable</h3>
+                    <p>Tres estilos diferentes para el shortcode: default, modern y minimal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>¿Cómo funciona?</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Instala el Plugin</h3>
+                    <p>Descarga e instala el plugin desde tu panel de WordPress o súbelo manualmente.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Actívalo</h3>
+                    <p>Activa el plugin desde la sección de Plugins en tu panel de administración.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>¡Listo!</h3>
+                    <p>El plugin ya está funcionando. Sube imágenes y verás como se genera el texto ALT automáticamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="installation">
+        <div class="container">
+            <h2>Instalación</h2>
+
+            <h3>Método 1: Desde WordPress</h3>
+            <ol>
+                <li>Ve a tu panel de WordPress → Plugins → Añadir nuevo</li>
+                <li>Busca "Auto ALT Text Generator"</li>
+                <li>Haz clic en "Instalar ahora" y luego "Activar"</li>
+            </ol>
+
+            <h3>Método 2: Subida manual</h3>
+            <ol>
+                <li>Descarga el archivo ZIP del plugin</li>
+                <li>Ve a Plugins → Añadir nuevo → Subir plugin</li>
+                <li>Selecciona el archivo ZIP y haz clic en "Instalar ahora"</li>
+                <li>Activa el plugin</li>
+            </ol>
+
+            <h3>Uso del Shortcode</h3>
+            <div class="code-block">
+                <!-- Básico --><br>
+                [auto_alt_text]<br><br>
+
+                <!-- Personalizado --><br>
+                [auto_alt_text button_text="Generar ALT" style="modern" show_stats="false"]<br><br>
+
+                <!-- Solo estadísticas --><br>
+                [auto_alt_text show_form="false" show_stats="true" style="minimal"]
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section" id="download">
+        <div class="container">
+            <h2>Descarga Gratuita</h2>
+            <p>Mejora la accesibilidad y SEO de tu sitio web hoy mismo</p>
+
+            <div class="hero-buttons">
+                <a href="https://wordpress.org/plugins/auto-alt-text-generator/" class="btn btn-primary">Descargar desde
+                    WordPress.org</a>
+                <a href="https://github.com/enricobonometti/auto-alt-text-generator" class="btn btn-secondary">Ver en
+                    GitHub</a>
+            </div>
+
+            <p style="margin-top: 2rem; opacity: 0.8;">
+                ✅ Gratuito para siempre | ✅ Sin límites | ✅ Código abierto
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Auto ALT Text Generator</h3>
+            <p>Plugin gratuito de WordPress para generar texto alternativo automáticamente</p>
+
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#instalacion">Instalación</a>
+                <a href="#descarga">Descarga</a>
+                <a href="mailto:support@alt-text-generator.com">Soporte</a>
+            </div>
+
+            <p>&copy; 2025 Auto ALT Text Generator. Todos los derechos reservados.</p>
+            <p>Desarrollado por <a href="https://enricobonometti.dev" style="color: #3498db;">Enrico Bonometti</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de contadores
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = counter.innerText;
+                const increment = target === '∞' ? 1 : target / 50;
+                let current = 0;
+
+                if (target !== '∞') {
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        counter.innerText = Math.floor(current) + (target.includes('%') ? '%' : '');
+                    }, 20);
+                }
+            });
+        }
+
+        // Ejecutar animación cuando la sección esté visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+
+</html>

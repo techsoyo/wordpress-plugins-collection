@@ -1,0 +1,261 @@
+# Copyright (C) 2023 FAQ Chatbot Developer
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: FAQ Chatbot for eCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/faq-chatbot\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-01T12:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: faq-chatbot\n"
+
+#. Plugin Name of the plugin
+msgid "FAQ Chatbot for eCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://example.com/faq-chatbot"
+msgstr ""
+
+#. Description of the plugin
+msgid "A chatbot that automatically responds to frequently asked questions in eCommerce stores"
+msgstr ""
+
+#. Author of the plugin
+msgid "FAQ Chatbot Developer"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://example.com"
+msgstr ""
+
+#: faq-chatbot.php:70
+msgid "Hello! How can I help you today?"
+msgstr ""
+
+#: faq-chatbot.php:71
+msgid "I'm sorry, I don't have an answer for that. Please contact our support team."
+msgstr ""
+
+#: faq-chatbot.php:73
+msgid "FAQ Assistant"
+msgstr ""
+
+#: faq-chatbot.php:74
+msgid "Send"
+msgstr ""
+
+#: faq-chatbot.php:75
+msgid "Type your question..."
+msgstr ""
+
+#: includes/class-faq-chatbot-activator.php:95
+msgid "How long does shipping take?"
+msgstr ""
+
+#: includes/class-faq-chatbot-activator.php:96
+msgid "Standard shipping takes 3-5 business days. Express shipping is available at checkout and takes 1-2 business days."
+msgstr ""
+
+#: includes/class-faq-chatbot-activator.php:99
+msgid "What is your return policy?"
+msgstr ""
+
+#: includes/class-faq-chatbot-activator.php:100
+msgid "We offer a 30-day return policy for all products. Items must be unused and in their original packaging."
+msgstr ""
+
+#: includes/class-faq-chatbot-activator.php:103
+msgid "Do you ship internationally?"
+msgstr ""
+
+#: includes/class-faq-chatbot-activator.php:104
+msgid "Yes, we ship to most countries worldwide. International shipping times vary from 7-21 business days depending on your location."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:112
+#: includes/class-faq-chatbot-admin.php:113
+msgid "FAQ Chatbot"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:124
+#: includes/class-faq-chatbot-admin.php:125
+#: admin/partials/faq-chatbot-admin-display.php:34
+#: admin/partials/faq-chatbot-admin-display.php:74
+#: admin/partials/faq-chatbot-admin-display.php:115
+msgid "FAQs"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:134
+#: includes/class-faq-chatbot-admin.php:135
+#: includes/class-faq-chatbot-admin.php:435
+msgid "Settings"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:145
+msgid "Conversation History"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:146
+msgid "History"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:182
+#: includes/class-faq-chatbot-admin.php:202
+#: includes/class-faq-chatbot-admin.php:217
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:240
+#: includes/class-faq-chatbot-admin.php:300
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:250
+msgid "Question and answer cannot be empty."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:284
+#: includes/class-faq-chatbot-admin.php:323
+#: includes/class-faq-chatbot-admin.php:397
+msgid "Database error. Please try again."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:286
+msgid "FAQ saved successfully."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:308
+msgid "Invalid FAQ ID."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:325
+msgid "FAQ deleted successfully."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:340
+msgid "Permission denied"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:347
+msgid "Invalid FAQ ID"
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:358
+msgid "FAQ not found."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:382
+msgid "No FAQs selected."
+msgstr ""
+
+#: includes/class-faq-chatbot-admin.php:399
+msgid "%d FAQs deleted successfully."
+msgstr ""
+
+#: includes/class-faq-chatbot-frontend.php:189
+msgid "Question is empty"
+msgstr ""
+
+#: includes/class-faq-chatbot-frontend.php:207
+msgid "I'm sorry, I don't have an answer for that. Please contact our support team."
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:20
+msgid "FAQ Chatbot - Manage FAQs"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:21
+msgid "Add New FAQ"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:28
+msgid "Add/Edit FAQ"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:39
+msgid "Answer"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:44
+msgid "Save FAQ"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:51
+msgid "Search FAQs..."
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:60
+msgid "Bulk Actions"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:61
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:63
+msgid "Apply"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:75
+#: admin/partials/faq-chatbot-admin-display.php:116
+msgid "Date"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:76
+#: admin/partials/faq-chatbot-admin-display.php:117
+msgid "Actions"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:98
+msgid "Edit"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:99
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:105
+msgid "No FAQs found. Add your first FAQ using the \"Add New FAQ\" button."
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:126
+msgid "Using the FAQ Chatbot"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:127
+msgid "You can add the chatbot to any page or post using the shortcode:"
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:128
+msgid "The chatbot will automatically appear on pages based on your settings in the Settings tab."
+msgstr ""
+
+#: admin/partials/faq-chatbot-admin-display.php:129
+msgid "For best results, add detailed FAQs that cover common customer questions."
+msgstr ""
+
+#: public/partials/faq-chatbot-public-display.php:20
+msgid "FAQ Assistant"
+msgstr ""
+
+#: public/partials/faq-chatbot-public-display.php:33
+msgid "Send"
+msgstr ""
+
+#: public/partials/faq-chatbot-public-display.php:34
+msgid "Type your question..."
+msgstr ""
+
+#: public/partials/faq-chatbot-public-display.php:51
+msgid "Type your question"
+msgstr ""
+
+#: public/partials/faq-chatbot-public-display.php:59
+msgid "Open chat"
+msgstr ""

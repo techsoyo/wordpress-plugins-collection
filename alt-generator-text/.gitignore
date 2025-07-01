@@ -1,0 +1,13 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Entornos
+.env
+.env.local
+

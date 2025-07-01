@@ -1,0 +1,140 @@
+/**
+ * FAQ Chatbot Tailwind CSS Styles
+ * 
+ * This file contains all the styling for the FAQ chatbot frontend using Tailwind CSS utilities.
+ * We're using a custom build of Tailwind that only includes the utilities we need to reduce file size.
+ */
+
+/* Base styles */
+.faq-chatbot-container {
+    @apply fixed bottom-4 right-4 z-50 w-80 h-96 bg-white rounded-lg shadow-lg flex flex-col overflow-hidden transition-all duration-300 transform scale-0 opacity-0;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 6rem);
+}
+
+.faq-chatbot-active {
+    @apply scale-100 opacity-100;
+}
+
+.faq-chatbot-header {
+    @apply bg-blue-600 text-white p-3 flex justify-between items-center;
+}
+
+.faq-chatbot-title {
+    @apply font-bold text-lg;
+}
+
+.faq-chatbot-close {
+    @apply cursor-pointer text-white opacity-75 hover:opacity-100 transition-opacity;
+}
+
+.faq-chatbot-messages {
+    @apply flex-grow p-3 overflow-y-auto space-y-3;
+    scrollbar-width: thin;
+}
+
+.faq-chatbot-message {
+    @apply p-3 rounded-lg max-w-[80%];
+}
+
+.faq-chatbot-bot-message {
+    @apply bg-gray-100 text-gray-800 rounded-bl-none;
+}
+
+.faq-chatbot-user-message {
+    @apply bg-blue-500 text-white ml-auto rounded-br-none;
+}
+
+.faq-chatbot-form {
+    @apply p-3 border-t border-gray-200;
+}
+
+.faq-chatbot-input-wrapper {
+    @apply flex;
+}
+
+.faq-chatbot-input {
+    @apply flex-grow border border-gray-300 rounded-l-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.faq-chatbot-submit {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.faq-chatbot-toggle {
+    @apply fixed bottom-4 right-4 z-40 w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:bg-blue-700 transition-colors;
+}
+
+.faq-chatbot-toggle-icon {
+    @apply text-white text-2xl;
+}
+
+/* Typing indicator */
+.faq-chatbot-typing {
+    @apply inline-flex space-x-1 items-center;
+}
+
+.faq-chatbot-typing span {
+    @apply animate-pulse text-lg;
+}
+
+.faq-chatbot-typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.faq-chatbot-typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .faq-chatbot-container {
+        @apply w-[calc(100vw-1rem)] h-[calc(100vh-6rem)] bottom-3 right-3;
+    }
+}
+
+/* Admin styles */
+.faq-chatbot-admin {
+    @apply p-4;
+}
+
+.faq-chatbot-admin-header {
+    @apply flex justify-between items-center mb-6;
+}
+
+.faq-chatbot-admin-title {
+    @apply text-2xl font-bold;
+}
+
+.faq-chatbot-admin-button {
+    @apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.faq-chatbot-admin-form {
+    @apply bg-white p-6 border border-gray-300 rounded mb-6;
+}
+
+.faq-chatbot-admin-form-row {
+    @apply mb-4;
+}
+
+.faq-chatbot-admin-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.faq-chatbot-admin-input {
+    @apply w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.faq-chatbot-admin-textarea {
+    @apply w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px];
+}
+
+.faq-chatbot-admin-table {
+    @apply w-full bg-white border border-gray-300 rounded;
+}
+
+/* Utility classes */
+.hidden {
+    @apply hidden;
+}

@@ -1,0 +1,34 @@
+/**
+ * Estilos para la página de administración del plugin
+ */
+
+.card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-field input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+}
+
+.form-field select {
+    width: 100%;
+    max-width: 200px;
+    padding: 6px;
+}

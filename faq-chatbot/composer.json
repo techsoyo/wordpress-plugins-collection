@@ -1,0 +1,22 @@
+{
+    "name": "faq-chatbot/wordpress-plugin",
+    "description": "FAQ Chatbot for eCommerce WordPress Plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "johnpbloch/wordpress": "*",
+        "brain/monkey": "^2.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FAQ_Chatbot\\": "includes/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

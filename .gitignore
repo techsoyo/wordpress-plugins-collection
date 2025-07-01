@@ -1,0 +1,30 @@
+# WordPress files
+*.php
+wp-*
+.htaccess
+
+# Archives
+*.zip
+*.tar.gz
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# Exclude plugins that are not ours
+akismet/
+elementor/
+plugin-check/
+
+# Keep only our demo files and documentation
+!*/demo.html
+!README.md
+!index.html
